@@ -1,3 +1,17 @@
+# TronXY melzi 2.0 v5 notes
+## Uploading
+See https://reprap.org/forum/read.php?158,486938 for related information. Following comment was helpful:
+```
+Downloaded latest ArduinoIDE 1.69. In that version, under files/preferences you can set additional URLs to keep board information up to date.
+I used [raw.githubusercontent.com] which meant I saw Sanguino as a board option in the IDE.
+But I was unable to compile to the board, it failed to sync when I chose the Sanguino board and selected "ATMega1284 or 1284P (16Mhz).
+I then modified the Boards.txt on line 78 to read "sanguino.menu.cpu.atmega1284p.upload.speed=57600" instead of 115200. This gave me sync with the board and I was able to upload Blink, but without any LED to blink this was pretty pointless. When I tried Marlin I received a "dunno what board this is" type error.
+Then I tried the T3P3 Marlin fork.
+I copied the T3P3 Sanguino folder across to C:\Program Files (x86)\Arduino\hardware\arduino\avr\sanguino It would not work correctly in any of the folders above this path.
+With the configuration.h modified to suit my printer (I hope) I was able to compile and upload was reported complete with no errors.
+Unfortunately the printer it is about to go into has completely different connections, so I won't be able to confirm until I can rejig it.
+```
+
 # Marlin 3D Printer Firmware
 <img align="right" src="../../raw/1.1.x/buildroot/share/pixmaps/logo/marlin-250.png" />
 
